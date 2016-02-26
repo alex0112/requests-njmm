@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160226223035) do
+ActiveRecord::Schema.define(version: 20160226231620) do
+
+  create_table "referrals", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "requests", force: true do |t|
     t.string   "name"
