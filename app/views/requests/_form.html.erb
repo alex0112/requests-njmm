@@ -14,22 +14,22 @@
     <div class="letter">
       <!-- Name: -->
       <%= f.label "To whom it may concern, my name is " %>
-      <%= f.text_field :name %>.
+      <%= f.text_field :name, label: '&nbsp;'.html_safe %>.
 
       
       <!-- Request: -->
 
       
       <%= f.label "I would like to ask that you send some missionaries to " %>
-      <%= f.select :request, [['{select}', 'select'], ['visit me.', 'visit'], ['deliver a copy of the Book of Mormon.', 'bom'], ['deliver a copy of the Bible.', 'bible']]%>
+      <%= f.select :request, [['{select}', 'select'], ['visit me.', 'visit'], ['deliver a copy of the Book of Mormon.', 'bom'], ['deliver a copy of the Bible.', 'bible']], label: '&nbsp;'.html_safe%>
       
       <!-- Address: -->
       <%= f.label "It would be best if they could drop it off at my address: " %>
-      <%= f.text_field :address %>
+      <%= f.text_field :address, label: '&nbsp;'.html_safe %>
       <%= f.label " I'll be expecting them within a day or so!  Thank you!" %>
       <!-- Comments: -->
       <%= f.label "PS" %>
-      <%= f.text_field :comments %></br>
+      <%= f.text_field :comments, label: '&nbsp;'.html_safe %></br>
       
       <%= f.submit "Send", class: "btn btn-submit" %>
     </div>
