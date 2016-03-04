@@ -1,9 +1,44 @@
-// Place all the styles related to the requests controller here.
+/* Place all the styles related to the requests controller here. 
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com/  */
+
+body {
+    background-image: image-url('wooden_desk.png');
+    display: flex;
+    flex-direction: column;
+}
 
 
 #new-request-form {
-    text-align: center;
 
+    /* Dimensions */
+    width: 750px;
+    height: 815px;
+
+    /* Margins and whatnot */
+    margin-top: 25%;
+    margin-bottom: 0px;
+    margin-left: auto; /* Center the letter */
+    margin-right: auto;
+    background-image: image-url('plain-paper-background.jpg');
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    box-shadow: 1px 1px 13px black;
+
+    .letter {
+	/* Font Related Styling */
+	font-family: Helvetica, Baskerville, 'Baskerville Italic', 'Adobe Caslon Pro', Garamond, Palatino, 'Times New Roman', Georgia, serif;
+	font-style: italic;
+	font-size: 13pt;
+	
+	/* Position and Sizing */
+	margin-top: 8%;
+	margin-bottom: auto;
+
+	/* Form Related Styling */
+	input {
+	    width: 100px;
+	}
+    }
 }
