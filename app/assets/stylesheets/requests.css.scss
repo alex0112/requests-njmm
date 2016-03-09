@@ -9,26 +9,31 @@ body {
 }
 
 
+#request-content {
+    position: relative;
+}
+
 #new-request-form {
 
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+    left: 5%;
+    
     /* Dimensions */
-    width: 750px;
-    height: 815px;
+    /* Do not add a width, it will break
+    height: 50%;
 
     /* Margins and whatnot */
-    margin-top: 25%;
-    margin-bottom: 0px;
-    margin-left: auto; /* Center the letter */
-    margin-right: auto;
     background-image: image-url('plain-paper-background.jpg');
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-top: 10px;
     box-shadow: 1px 1px 13px black;
 
     .letter {
 	/* Font Related Styling */
-	font-family: Helvetica, Baskerville, 'Baskerville Italic', 'Adobe Caslon Pro', Garamond, Palatino, 'Times New Roman', Georgia, serif;
+	font-family: 'Baskerville Italic', 'Adobe Caslon Pro', Garamond, Palatino, 'Times New Roman', Georgia, serif;
 	font-style: italic;
 	font-size: 13pt;
 	
@@ -37,9 +42,19 @@ body {
 	margin-bottom: auto;
 
 	/* Form Related Styling */
+
+	.indent {
+	    margin-left: 5%;
+	}
 	input {
 	    width: 100px;
 	}
 
     }
+
+    .form-group {
+	display: inline-block;
+    }
+
+
 }

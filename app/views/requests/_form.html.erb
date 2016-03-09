@@ -13,23 +13,34 @@
 
     <div class="letter">
       <!-- Name: -->
-      <%= f.label "To whom it may concern, my name is " %>
-      <%= f.text_field :name, label: '&nbsp;'.html_safe %>.
-
+      <span class="letter-text">
+	To whom it may concern, </br> <span class="indent"> my name is </span>
+	<%= f.label :name, hidden: true %>
+	<%= f.text_field :name, label: '&nbsp;'.html_safe %>.
+      </span>
       
       <!-- Request: -->
 
-      
-      <%= f.label "I would like to ask that you send some missionaries to " %>
-      <%= f.select :request, [['{select}', 'select'], ['visit me.', 'visit'], ['deliver a copy of the Book of Mormon.', 'bom'], ['deliver a copy of the Bible.', 'bible']], label: '&nbsp;'.html_safe%>
+      <span class="letter-text">
+	I would like to request that you send missionaries to 
+	<%= f.label :request, hidden: true %>
+	<%= f.select :request, [['deliver a copy of the Book of Mormon.', 'bom'], ['come visit me.', 'visit'], ['deliver a copy of the Bible.', 'bible']], label: '&nbsp;'.html_safe%>
+      </span>
       
       <!-- Address: -->
-      <%= f.label "It would be best if they could drop it off at my address: " %>
-      <%= f.text_field :address, label: '&nbsp;'.html_safe %>
-      <%= f.label " I'll be expecting them within a day or so!  Thank you!" %>
+      <span class="letter-text">
+	At my home: 
+	<%= f.label :address, hidden: true %>
+	<%= f.text_field :address, label: '&nbsp;'.html_safe %>
+	I'll be expecting them within a day or so!  Thank you!
+      </span></br>
+      
       <!-- Comments: -->
-      <%= f.label "PS" %>
-      <%= f.text_field :comments, label: '&nbsp;'.html_safe %></br>
+      <span class="letter-text">
+	<%= f.label :comments, hidden: true %>
+	PS
+	<%= f.text_field :comments, label: '&nbsp;'.html_safe %>
+      </span></br>
       
       <%= f.submit "Send", class: "btn btn-submit" %>
     </div>
