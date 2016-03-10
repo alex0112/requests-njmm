@@ -18,8 +18,9 @@ body {
     position: fixed;
     bottom: 0;
     right: 5%;
-    left: 5%;
-    
+    left: 21%;
+    top: 50%;
+    max-width: 50%;    
     /* Dimensions */
     /* Do not add a width, it will break stuff (because of position fixed.  Use bottom/left/right/top etc. to adjust dimensions.) */
     height: 50%;
