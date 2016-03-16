@@ -14,3 +14,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore the secret file for figaro gem. I'm not sure why this didn't happen automatically.
+/config/application.yml
