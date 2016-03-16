@@ -20,3 +20,7 @@
 
 # Ignore all emacs backup files
 *~
+
+# Ignore the secret file for figaro gem. I'm not sure why this didn't happen automatically.
+/config/application.yml
+
