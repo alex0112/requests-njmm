@@ -28,6 +28,11 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       if @request.save
+
+        puts "SENDING!!!!"
+        AreaMailer.area_email(Area.last, @request).deliver ## Area.first will be replaced by some sort of API call to GMaps where it ascertains their actual area.  Placeholder for now.
+        puts "SENT!!!  IN THEORY!"
+
         format.html { redirect_to @request, notice: 'Request was successfully created.' }
         format.json { render :show, status: :created, location: @request }
       else
