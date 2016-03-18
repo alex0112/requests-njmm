@@ -11,6 +11,6 @@
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
 
-gmail_username: ENV['gmail_username']
-gmail_password: ENV['gmail_password']
+gmail_username: <%= ENV['gmail_username'] %>
+gmail_password: <%= ENV['gmail_password'] %>
 
