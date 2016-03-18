@@ -36,9 +36,9 @@ Your application is set to precompile the assets every time you push
 to OpenShift. Any assets you commit to your repo will be preserved
 alongside those which are generated during the build.
 
-By adding `disable_asset_compilation` marker, you will disable asset compilation upon application deployment.  ## SEE BELOW
-###  NOTE:  THIS MARKER HAS BEEN SET!!!  ASSETS WILL NOT PRECOMPILE!  DON'T DO IT, IT WILL TRIGGER A KNOWN BUG IN OPENSHIFT! ~Elder A. Larsen
-###  SEE: https://github.com/openshift/origin-community-cartridges/issues/8 for details.
+By adding `disable_asset_compilation` marker, you will disable asset compilation upon application deployment.
+###  NOTE:  THIS MARKER HAS BEEN SET!!!  ASSETS WILL NOT PRECOMPILE!  DON'T PRECOMPILE THEM, IT WILL TRIGGER A KNOWN BUG IN OPENSHIFT! ~Elder A. Larsen
+###  SEE: https://github.com/openshift/origin-community-cartridges/issues/8#issuecomment-64107126
 
 
 
