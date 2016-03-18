@@ -30,6 +30,8 @@ class RequestsController < ApplicationController
       if @request.save
 
         puts "SENDING!!!!"
+
+        puts "Sending to: #{ENV['gmail_username']}..."
         AreaMailer.area_email(Area.last, @request).deliver ## Area.first will be replaced by some sort of API call to GMaps where it ascertains their actual area.  Placeholder for now.
         puts "SENT!!!  IN THEORY!"
 
