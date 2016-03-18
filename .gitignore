@@ -15,7 +15,7 @@
 /log/*.log
 /tmp
 
-# Ignore application configuration
+# Ignore application configuration See figaro gem documentation.  See also: https://howilearnedrails.wordpress.com/2013/08/05/environment-variables-with-the-figaro-gem/
 /config/application.yml
 
 # Ignore all emacs backup files
