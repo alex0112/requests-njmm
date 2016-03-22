@@ -13,8 +13,17 @@ body {
     position: relative;
 }
 
-#new-request-form {
 
+#gradient {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(255,0,0,0), black);
+    opacity: 0.5;
+}
+
+#new-request-form {
+    opacity: 1;
     position: fixed;
     bottom: 0;
     right: 5%;
@@ -30,7 +39,7 @@ body {
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 10px;
-    box-shadow: 1px 1px 13px black;
+    box-shadow: 3px 11px 15px black;
 
     .letter {
 	/* Font Related Styling */
