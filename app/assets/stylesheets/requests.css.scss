@@ -50,12 +50,20 @@ body {
 	input {
 	    width: 100px;
 	}
-
+	input, select {
+	    /* Make the inputs have lines on the bottom instead of being an indented box */
+	    border: none;
+	    border-bottom: 1px solid grey;
+	    border-radius: 1px;
+	    box-shadow: none;
+	    background: inherit;
+	    
+	}
     }
-
+    
     .form-group {
 	display: inline-block;
     }
 
-
+    
 }
