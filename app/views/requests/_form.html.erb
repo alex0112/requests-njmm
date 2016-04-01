@@ -11,38 +11,46 @@
     </div>
     <% end %>
 
-    <div class="letter">
+
+
+    <div class="col-xs-1"></div>
+    
+    <div class="col-xs-10 footer navbar-fixed-bottom letter">
+
+
       <!-- Name: -->
-      <span class="letter-text">
-	To whom it may concern, </br> <span class="indent"> my name is </span>
+
+
+      	To whom it may concern, my name is: <%= f.text_field :name, placeholder: 'Name', required: true, label: '&nbsp;'.html_safe %>
 	<%= f.label :name, hidden: true %>
-	<%= f.text_field :name, label: '&nbsp;'.html_safe %>.
-      </span>
       
       <!-- Request: -->
 
-      <span class="letter-text">
-	I would like to request that you send missionaries to 
-	<%= f.label :request, hidden: true %>
-	<%= f.select :request, [['deliver a copy of the Book of Mormon.', 'bom'], ['come visit me.', 'visit'], ['deliver a copy of the Bible.', 'bible']], label: '&nbsp;'.html_safe%>
-      </span>
+
+      I would like to request that you send missionaries to
+      	<%= f.label :request, hidden: true %>
+      	<%= f.select :request, [['deliver a copy of the Book of Mormon.', 'bom'], ['come visit me.', 'visit'], ['deliver a copy of the Bible.', 'bible']], label: '&nbsp;'.html_safe%>
+
       
       <!-- Address: -->
-      <span class="letter-text">
-	At my home: 
-	<%= f.label :address, hidden: true %>
-	<%= f.text_field :address, label: '&nbsp;'.html_safe %>
-	I'll be expecting them within a day or so!  Thank you!
-      </span></br>
+
+      	At my home:
+      	<%= f.label :address, hidden: true %>
+      	<%= f.text_field :address, required: true, placeholder: '##, Street, City, State', label: '&nbsp;'.html_safe %>
+      	I'll be expecting them within a day or so!  Thank you!
+	<br>
       
       <!-- Comments: -->
-      <span class="letter-text">
-	<%= f.label :comments, hidden: true %>
-	PS
-	<%= f.text_field :comments, label: '&nbsp;'.html_safe %>
-      </span></br>
+
+      	<%= f.label :comments, hidden: true %>
+      	PS
+      	<%= f.text_area :comments, placeholder: 'Additional Comments', label: '&nbsp;'.html_safe %>
+	<br>
       
-      <%= f.submit "Send", class: "btn btn-submit" %>
+      <%= f.submit "Send", class: "btn btn-submit send" %>
     </div>
+        
+    <div class="col-xs-1"></div>
+    
     <% end %>
     
