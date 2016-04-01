@@ -28,6 +28,7 @@ body {
 /* These rules should render for small screens first */
 .letter, .footer, .navbar-fixed-bottom, option {
     background-image: image-url('plain-paper-background.jpg');
+    box-shadow: 3px 11px 15px black;
     height: 60%;
     padding: 10%;
     position: relative;
@@ -79,12 +80,22 @@ body {
     }
     
     .btn, .btn-submit, .send { /* the button should be a regular bootstrap looking button */
-	all: initial !important;
+	all: initial;
 	
 	&:focus, &:active {
-		     all: initial !important;
+		     all: initial;
 		 }
     }
 }
 
 
+
+/* Rules for screens wider than 800px */
+@media screen and (min-width: 800px) {
+
+    .letter, .footer, .navbar-fixed-bottom, option {
+	max-width: 50%;
+	padding: 5%;
+    }
+    
+}
