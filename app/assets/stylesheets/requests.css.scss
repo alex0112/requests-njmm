@@ -2,77 +2,89 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/  */
 
+
+
+
 body {
+    max-width: 100%;
     background-image: image-url('wooden_desk.png');
     display: flex;
     flex-direction: column;
 }
 
 
-#request-content {
-    position: relative;
-}
-
-
+/* Provides a shadow on the desk */
 #gradient {
     position: fixed;
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom right, rgba(255,0,0,0), black);
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
-#new-request-form {
-    opacity: 1;
-    position: fixed;
-    bottom: 0;
-    right: 5%;
-    left: 21%;
-    top: 50%;
-    max-width: 50%;    
-    /* Dimensions */
-    /* Do not add a width, it will break stuff (because of position fixed.  Use bottom/left/right/top etc. to adjust dimensions.) */
-    height: 50%;
 
-    /* Margins and whatnot */
+
+
+/* These rules should render for small screens first */
+.letter, .footer, .navbar-fixed-bottom, option {
     background-image: image-url('plain-paper-background.jpg');
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 10px;
-    box-shadow: 3px 11px 15px black;
+    height: 60%;
+    padding: 10%;
+    position: relative;
 
-    .letter {
-	/* Font Related Styling */
-	font-family: 'Baskerville Italic', 'Adobe Caslon Pro', Garamond, Palatino, 'Times New Roman', Georgia, serif;
-	font-style: italic;
-	font-size: 13pt;
+    
+    /* Center The Letter: */
+    float: none;
+    margin: 0 auto;
+    
+    /* Font related styling: */
+    font-family: Courier, Georgia, serif;
+    font-size: 120%;
+    font-weight: italic;
+    
+
+    textarea {
+	background: inherit;
+
+	&::placeholder {
+	    text-overflow: elipses;
+	    font-weight: 100;
+	}
+    }
+
+
+    
+    input, select, {
+
 	
-	/* Position and Sizing */
-	margin-top: 8%;
-	margin-bottom: 15%;
+	&:focus, &:active {
+		     border-bottom: 1px solid grey;
+		     box-shadow: inherit;
+		 }
 
-	/* Form Related Styling */
-
-	.indent {
-	    margin-left: 5%;
-	}
-	input {
-	    width: 100px;
-	}
-	input, select {
-	    /* Make the inputs have lines on the bottom instead of being an indented box */
-	    border: none;
-	    border-bottom: 1px solid grey;
-	    border-radius: 1px;
-	    box-shadow: none;
-	    background: inherit;
-	    
+	/* Make the inputs have lines on the bottom instead of being an indented box */
+	border: none;
+	border-bottom: 1px solid grey;
+	border-radius: 1px;
+	box-shadow: none;
+	background: inherit;
+	margin: auto;
+	width: 100%;
+	text-overflow: elipses;
+	
+	&::placeholder {
+	    font-weight: 100;
+	    text-overflow: elipses;
 	}
     }
     
-    .form-group {
-	display: inline-block;
+    .btn, .btn-submit, .send { /* the button should be a regular bootstrap looking button */
+	all: initial !important;
+	
+	&:focus, &:active {
+		     all: initial !important;
+		 }
     }
-
-    
 }
+
+
